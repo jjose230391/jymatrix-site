@@ -63,3 +63,9 @@
 @media(max-width:760px){.process-section .section-heading>p{max-width:100%}}
 @media(min-width:761px){.process-section .section-heading{display:grid;grid-template-columns:1fr minmax(300px, .65fr);gap:48px}.process-section .section-heading>p{max-width:100%}}
 @media(min-width:761px){.process-section .section-heading{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px}.process-section .section-heading>p{width:100%;max-width:none}}
+.service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.service-card,.service-card.outsourcing-card{grid-column:auto;border:0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:transparent}
+.service-card:nth-child(3n){border-right:0}
+.service-card:nth-child(n+4){border-bottom:0}
+@media(max-width:1050px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.service-card:nth-child(n){border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.service-card:nth-child(2n){border-right:0}.service-card:nth-child(n+5){border-bottom:0}}
+@media(max-width:420px){.service-grid{grid-template-columns:1fr}.service-card:nth-child(n){border-right:0;border-bottom:1px solid var(--line)}.service-card:last-child{border-bottom:0}}
